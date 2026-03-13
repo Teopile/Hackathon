@@ -2,6 +2,7 @@ package tests.ui;
 
 import ge.tbc.testautomation.hackathon.steps.LoginSteps;
 import ge.tbc.testautomation.hackathon.steps.TravelModeSteps;
+import ge.tbc.testautomation.hackathon.utils.Constants;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -15,14 +16,19 @@ public class TravelModeUITest extends BaseTest {
     private TravelModeSteps travelModeSteps;
 
     @Parameters({"browserName", "viewportWidth", "viewportHeight"})
-    @BeforeMethod(dependsOnMethods = "setUp")
+    @BeforeMethod
     public void initSteps(
             @Optional("chromium") String browserName,
-            @Optional("1280")     String viewportWidth,
-            @Optional("720")      String viewportHeight) {
-        loginSteps      = new LoginSteps(page);
+            @Optional("1280") String viewportWidth,
+            @Optional("720") String viewportHeight) {
+
+        loginSteps = new LoginSteps(page);
         travelModeSteps = new TravelModeSteps(page);
+
+        page.navigate(Constants.LOCAL_UI_URL + "/login");
+
         loginSteps.loginAsTestUser();
+
         travelModeSteps.openTravelModeDashboard();
     }
 
