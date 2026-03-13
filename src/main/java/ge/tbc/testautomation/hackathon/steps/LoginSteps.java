@@ -1,7 +1,7 @@
 package ge.tbc.testautomation.hackathon.steps;
 
 import com.microsoft.playwright.Page;
-import framework.pages.LoginPage;
+import ge.tbc.testautomation.hackathon.pages.LoginPage;
 import ge.tbc.testautomation.hackathon.utils.Constants;
 import io.qameta.allure.Step;
 

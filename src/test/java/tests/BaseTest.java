@@ -1,8 +1,8 @@
 package tests;
 
 import com.microsoft.playwright.*;
-import framework.api.ApiClient;
-import framework.utils.Constants;
+import ge.tbc.testautomation.hackathon.api.ApiClient;
+import ge.tbc.testautomation.hackathon.utils.Constants;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.*;
 
@@ -51,7 +51,7 @@ public class BaseTest {
 
     private static Browser launchBrowser(Playwright pw, String browserName) {
         BrowserType.LaunchOptions opts = new BrowserType.LaunchOptions()
-                .setHeadless(false)
+                .setHeadless(true)
                 .setSlowMo(100);
 
         return switch (browserName.toLowerCase()) {

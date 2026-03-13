@@ -1,8 +1,8 @@
-package framework.pages;
+package ge.tbc.testautomation.hackathon.pages;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.LoadState;
-import framework.utils.Constants;
+import ge.tbc.testautomation.hackathon.utils.Constants;
 
 public class TravelModePage {
 

@@ -1,6 +1,6 @@
 package tests.data.TestDataProviders;
 
-import framework.utils.Constants;
+import ge.tbc.testautomation.hackathon.utils.Constants;
 import org.testng.annotations.DataProvider;
 
 public class LoginDataProvider {

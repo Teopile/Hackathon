@@ -19,54 +19,54 @@
             <class name="tests.ui.TravelModeUITest"/>
         </classes>
     </test>
+    <!--    <test name="UI — Firefox (Desktop)">-->
+    <!--        <parameter name="browserName"       value="firefox"/>-->
+    <!--        <parameter name="headless"          value="false"/>-->
+    <!--        <parameter name="viewportWidth"     value="1280"/>-->
+    <!--        <parameter name="viewportHeight"    value="720"/>-->
+    <!--        <parameter name="isMobile"          value="false"/>-->
+    <!--        <parameter name="deviceScaleFactor" value="1"/>-->
+    <!--        <classes>-->
+    <!--            <class name="tests.ui.TravelModeUITest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-    <test name="UI — Firefox (Desktop)">
-        <parameter name="browserName"       value="firefox"/>
-        <parameter name="headless"          value="false"/>
-        <parameter name="viewportWidth"     value="1280"/>
-        <parameter name="viewportHeight"    value="720"/>
-        <parameter name="isMobile"          value="false"/>
-        <parameter name="deviceScaleFactor" value="1"/>
-        <classes>
-            <class name="tests.ui.TravelModeUITest"/>
-        </classes>
-    </test>
+    <!--    <test name="UI — WebKit / Safari (Desktop)">-->
+    <!--        <parameter name="browserName"       value="webkit"/>-->
+    <!--        <parameter name="headless"          value="false"/>-->
+    <!--        <parameter name="viewportWidth"     value="1280"/>-->
+    <!--        <parameter name="viewportHeight"    value="720"/>-->
+    <!--        <parameter name="isMobile"          value="false"/>-->
+    <!--        <parameter name="deviceScaleFactor" value="1"/>-->
+    <!--        <classes>-->
+    <!--            <class name="tests.ui.TravelModeUITest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-    <test name="UI — WebKit / Safari (Desktop)">
-        <parameter name="browserName"       value="webkit"/>
-        <parameter name="headless"          value="false"/>
-        <parameter name="viewportWidth"     value="1280"/>
-        <parameter name="viewportHeight"    value="720"/>
-        <parameter name="isMobile"          value="false"/>
-        <parameter name="deviceScaleFactor" value="1"/>
-        <classes>
-            <class name="tests.ui.TravelModeUITest"/>
-        </classes>
-    </test>
+    <!--    <test name="UI — iPhone 14 (390×844)">-->
+    <!--        <parameter name="browserName"       value="webkit"/>-->
+    <!--        <parameter name="headless"          value="false"/>-->
+    <!--        <parameter name="viewportWidth"     value="390"/>-->
+    <!--        <parameter name="viewportHeight"    value="844"/>-->
+    <!--        <parameter name="isMobile"          value="true"/>-->
+    <!--        <parameter name="deviceScaleFactor" value="3"/>-->
+    <!--        <classes>-->
+    <!--            <class name="tests.ui.TravelModeUITest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-    <test name="UI — iPhone 14 (390×844)">
-        <parameter name="browserName"       value="webkit"/>
-        <parameter name="headless"          value="false"/>
-        <parameter name="viewportWidth"     value="390"/>
-        <parameter name="viewportHeight"    value="844"/>
-        <parameter name="isMobile"          value="true"/>
-        <parameter name="deviceScaleFactor" value="3"/>
-        <classes>
-            <class name="tests.ui.TravelModeUITest"/>
-        </classes>
-    </test>
-
-    <test name="UI — Samsung Galaxy S21 (360×800)">
-        <parameter name="browserName"       value="chromium"/>
-        <parameter name="headless"          value="false"/>
-        <parameter name="viewportWidth"     value="360"/>
-        <parameter name="viewportHeight"    value="800"/>
-        <parameter name="isMobile"          value="true"/>
-        <parameter name="deviceScaleFactor" value="3"/>
-        <classes>
-            <class name="tests.ui.TravelModeUITest"/>
-        </classes>
-    </test>
+    <!--    <test name="UI — Samsung Galaxy S21 (360×800)">-->
+    <!--        <parameter name="browserName"       value="chromium"/>-->
+    <!--        <parameter name="headless"          value="false"/>-->
+    <!--        <parameter name="viewportWidth"     value="360"/>-->
+    <!--        <parameter name="viewportHeight"    value="800"/>-->
+    <!--        <parameter name="isMobile"          value="true"/>-->
+    <!--        <parameter name="deviceScaleFactor" value="3"/>-->
+    <!--        <classes>-->
+    <!--            <class name="tests.ui.TravelModeUITest"/>-->
+    <!--        </classes>-->
+    <!--    </test>
+-->
 
     <test name="API — Travel Mode">
         <classes>

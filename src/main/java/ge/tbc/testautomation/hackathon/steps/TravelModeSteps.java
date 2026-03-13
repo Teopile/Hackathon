@@ -1,7 +1,7 @@
 package ge.tbc.testautomation.hackathon.steps;
 
 import com.microsoft.playwright.Page;
-import framework.pages.TravelModePage;
+import ge.tbc.testautomation.hackathon.pages.TravelModePage;
 import io.qameta.allure.Step;
 
 public class TravelModeSteps {
