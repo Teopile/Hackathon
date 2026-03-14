@@ -6,7 +6,11 @@
 <suite name="TBC Travel Mode — Cross-Browser + Mobile Suite"
        verbose="1"
        parallel="tests"
-       thread-count="5">
+       thread-count="2">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
 
     <test name="UI — Chromium (Desktop)">
         <parameter name="browserName"       value="chromium"/>
@@ -20,9 +24,6 @@
         </classes>
     </test>
 
-    <listeners>
-        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-    </listeners>
     <!--    <test name="UI — Firefox (Desktop)">-->
     <!--        <parameter name="browserName"       value="firefox"/>-->
     <!--        <parameter name="headless"          value="false"/>-->

@@ -1,0 +1,49 @@
+image: eclipse-temurin:17-jdk-jammy
+
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push"'
+
+cache:
+  key: maven-cache
+  paths:
+    - .m2/repository
+
+stages:
+  - test
+
+run-tests:
+  stage: test
+
+  variables:
+    MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository"
+
+  before_script:
+    - apt-get update -qq
+    - apt-get install -y -qq
+        libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2
+        libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2
+        libgbm1 libasound2 libpango-1.0-0 libpangocairo-1.0-0
+        libx11-xcb1 libxcb-dri3-0 libxshmfence1 libgles2
+        libwayland-client0 libwayland-egl1 libwayland-server0
+        fonts-liberation libdbus-glib-1-2 libgtk-3-0 libxt6
+    - mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install"
+
+  script:
+    - mvn test -B -D headless=true
+
+  after_script:
+    - |
+      echo "──────────────────────────────────────"
+      echo "TEST SUMMARY"
+      grep -h "Tests run:" target/surefire-reports/*.txt 2>/dev/null || echo "No surefire report found"
+      echo "──────────────────────────────────────"
+
+  artifacts:
+    when: always
+    expire_in: 30 days
+    paths:
+      - target/surefire-reports/
+      - target/allure-results/
+    reports:
+      junit: target/surefire-reports/TEST-*.xml
